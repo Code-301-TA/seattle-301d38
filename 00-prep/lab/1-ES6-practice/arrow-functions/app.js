@@ -108,7 +108,7 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 
 
 
-let sum = function(a, b, c, d) {
+let sum = (a, b, c, d) => {
   return a + b + c + d;
 };
 
@@ -128,7 +128,7 @@ let objectLit = function() {
 console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+let sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
@@ -138,7 +138,7 @@ let sumAndProduct = function(a, b) {
 console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
+let message = (name) => {
   return `Hello, ${name}!`;
 };
 
@@ -159,7 +159,7 @@ let joe = new Student('Joe', 'Schmoe', 100);
 console.log(joe);
 
 
-Student.prototype.greeting = function() {
+Student.prototype.greeting = () => {
   return `Hi, my name is ${this.name}`;
 };
 
@@ -168,7 +168,7 @@ Student.prototype.greeting = function() {
 console.log(joe.greeting());
 
 
-Student.courseName = function() {
+Student.courseName = () => {
   return 'This student is enrolled in Code 301.';
 };
 
@@ -179,7 +179,7 @@ console.log(Student.courseName());
 
 // STEP 11
 // How do arrow functions affect constructor functions?
-Student.prototype.scope = function() {
+Student.prototype.scope = () => {
   console.log(this);
 };
 
